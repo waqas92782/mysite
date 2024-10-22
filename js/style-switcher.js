@@ -30,3 +30,23 @@ function setActivestyle(color){
         }
     })
 }
+
+
+
+// light and dark mood 
+
+const dayNlight = document.querySelector(".day-night");
+dayNlight.addEventListener("click", ()=>{
+    dayNlight.querySelector("i").classList.toggle("fa-sun");
+    dayNlight.querySelector("i").classList.toggle("fa-moon");
+    document.body.classList.toggle("dark")
+})
+
+window.addEventListener("load" , ()=>{
+    if(document.body.classList.contains("dark")){
+        dayNlight.querySelector("i").classList.add("fa-sun");
+    }
+    else{
+        dayNlight.querySelector("i").classList.add("fa-moon");
+    }
+})
