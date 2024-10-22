@@ -464,7 +464,7 @@ h3 span.typing {
 }
 
 .about .about-content .timeline .timeline-item {
-  buttonsing-left: 37px;
+  padding-left: 37px;
   position: relative;
   padding-bottom: 50px;
 }
