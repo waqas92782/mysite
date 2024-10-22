@@ -57,8 +57,15 @@
         flex: 0 0 100%;
         max-width: 100%;
     }
+
     .about .about-content .persona-info .info-item p span {
       font-size: 11px;
+    }
+    .about .about-content .persona-info .buttons {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
     .section {
       padding: 0px 25px;
@@ -75,10 +82,5 @@
     .padd-15{
       padding-left: 10px;
       padding-right: 10px;
-    }
-
-    .btn{
-      margin-left: 0px !important;
-      padding: 10px 15px;
     }
 }
