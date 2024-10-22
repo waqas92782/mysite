@@ -19,34 +19,58 @@ window.addEventListener("scroll", ()=>{
 // colors 
 
 const altenatestyle = document.querySelectorAll(".alternate-style");
-function setActivestyle(color){
-    altenatestyle.forEach((style)=>{
-        if(color === style.getAttribute("title"))
-        {
+function setActivestyle(color) {
+    altenatestyle.forEach((style) => {
+        if (color === style.getAttribute("title")) {
             style.removeAttribute("disabled");
+        } else {
+            style.setAttribute("disabled", "true");
         }
-        else{
-            style.setAttribute("disabled","true")
-        }
-    })
+    });
+    // Save selected color to localStorage
+    localStorage.setItem("active-style", color);
 }
+
+// Check active style on page load
+window.addEventListener("load", () => {
+    const savedStyle = localStorage.getItem("active-style");
+    if (savedStyle) {
+        setActivestyle(savedStyle);
+    } else {
+        // Optional: Set a default style if none is saved
+        setActivestyle(altenatestyle[0].getAttribute("title")); // Default to first style
+    }
+});
+
 
 
 
 // light and dark mood 
 
 const dayNlight = document.querySelector(".day-night");
-dayNlight.addEventListener("click", ()=>{
+
+// Toggle Dark Mode on Button Click
+dayNlight.addEventListener("click", () => {
     dayNlight.querySelector("i").classList.toggle("fa-sun");
     dayNlight.querySelector("i").classList.toggle("fa-moon");
-    document.body.classList.toggle("dark")
-})
+    document.body.classList.toggle("dark");
 
-window.addEventListener("load" , ()=>{
-    if(document.body.classList.contains("dark")){
-        dayNlight.querySelector("i").classList.add("fa-sun");
+    // Save current theme to localStorage
+    if (document.body.classList.contains("dark")) {
+        localStorage.setItem("theme", "dark");
+    } else {
+        localStorage.setItem("theme", "light");
     }
-    else{
+});
+
+// Check Theme on Page Load
+window.addEventListener("load", () => {
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark");
+        dayNlight.querySelector("i").classList.add("fa-sun");
+    } else {
         dayNlight.querySelector("i").classList.add("fa-moon");
     }
-})
+});
