@@ -58,7 +58,7 @@
         max-width: 100%;
     }
     .about .about-content .persona-info .info-item p span {
-      font-size: 14px;
+      font-size: 13px;
     }
 
     h3.profeesion {
@@ -66,7 +66,12 @@
     }
 
     .padd-15{
-      padding-left: 12px;
-      padding-right: 12px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .btn{
+      margin-left: 0px;
+      padding: 10px 25px;
     }
 }
