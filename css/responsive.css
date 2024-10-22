@@ -58,11 +58,18 @@
         max-width: 100%;
     }
     .about .about-content .persona-info .info-item p span {
-      font-size: 10px;
+      font-size: 11px;
+    }
+    .section {
+      padding: 0px 25px;
+    }
+
+    .style-switcher .s-icon {
+      margin-right: 10px !important;
     }
 
     h3.profeesion {
-      font-size: 23px;
+      font-size: 20px;
     }
 
     .padd-15{
