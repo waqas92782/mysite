@@ -9,15 +9,15 @@
 }
 
 @media (max-width: 940px) {
-  .home .home-info{
+  .home .home-info {
     flex: 0 0 100%;
     max-width: 100%;
   }
-
   .home .home-img {
-    display: none;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 50px;
   }
-
   .about .about-content .persona-info .info-item p span {
     display: block;
     margin-left: 0px;
@@ -41,41 +41,63 @@
   }
 }
 
-
 @media (max-width: 700px) {
-    .Contact .contact-form .col-6,
-    .Services .section-item,
-    .protfolio .profolio-item{
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
+  .Contact .contact-form .col-6,
+  .Services .section-item,
+  .protfolio .profolio-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .Contact .Contact-info-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .home .home-img::before {
+    top: -28px;
+    left: 17px;
+  }
+  .home .home-img::after {
+    bottom: -25px;
+    right: 19px;
+  }
+  .about .about-content .persona-info .info-item p span {
+    font-size: 11px;
+  }
+  .about .about-content .persona-info .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .section {
+    padding: 0px 25px;
+  }
+
+  .style-switcher .s-icon {
+    margin-right: 10px !important;
+  }
+
+  h3.profeesion {
+    font-size: 20px;
+  }
+  .Contact .contact-form .btn{
+    display: block;
+    margin: 0px auto !important;
+  }
 }
 
 
-@media (max-width: 500px) {
-    .Contact .Contact-info-item{
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-
-    .about .about-content .persona-info .info-item p span {
-      font-size: 11px;
-    }
-    .about .about-content .persona-info .buttons {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .section {
-      padding: 0px 25px;
-    }
-
-    .style-switcher .s-icon {
-      margin-right: 10px !important;
-    }
-
-    h3.profeesion {
-      font-size: 20px;
-    }
+@media (max-width: 400px) {
+  .home .home-img {
+    margin-top: 70px;
+  }
+  .home .home-img::before {
+    left: 5px;
+  }
+  .home .home-img::after {
+    right: 5px;
+  }
 }

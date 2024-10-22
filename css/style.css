@@ -74,6 +74,10 @@ ul li {
   position: relative;
 }
 
+.revre{
+  flex-direction:row-reverse ;
+}
+
 .btn {
   font-size: 16px;
   padding: 12px 35px;
