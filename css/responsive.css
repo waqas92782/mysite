@@ -57,4 +57,16 @@
         flex: 0 0 100%;
         max-width: 100%;
     }
+    .about .about-content .persona-info .info-item p span {
+      font-size: 14px;
+    }
+
+    h3.profeesion {
+      font-size: 23px;
+    }
+
+    .padd-15{
+      padding-left: 12px;
+      padding-right: 12px;
+    }
 }
