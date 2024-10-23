@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=7">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Images/favicon.png" type="image/x-icon">
     <!---===== CSS Files ===== --->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/skin/color-1.css">
@@ -55,8 +56,8 @@
                             <p>I' m Waqas, as a Website Frontend Designer with 2 years of experience. I specialize in
                                 transforming Figma, PDF, AI, and PSD designs into high-quality, responsive websites
                                 using HTML, CSS, CSS3, JavaScript, jQuery, and Bootstrap 4/5, and many more.....</p>
-                                <a href="https://wa.me/923143303744?text=Hello Are You Avilable." 
-                                id="contect" class="btn hire-me" target="_blank">Hire Me</a>                             
+                            <a href="https://wa.me/923143303744?text=Hello Are You Avilable." id="contect"
+                                class="btn hire-me" target="_blank">Hire Me</a>
                         </div>
                         <div class="home-img padd-15">
                             <img src="Images/WhatsApp Image 2024-10-16 at 01.05.44_036917ee.jpg" alt="my-img">
@@ -463,47 +464,54 @@
                     <!---===== contact form ===== --->
                     <div class="row">
                         <div class="contact-form padd-15">
-                            <div class="row">
-                                <!---===== form item start ===== --->
-                                <div class="form-item col-6 padd-15">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Name">
+                            <form action="https://api.web3forms.com/submit" method="POST">
+                                <input type="hidden" name="access_key" value="132390b1-e78e-40ac-a329-27b002ea8a96">
+                                <div class="row">
+                                    <!---===== form item start ===== --->
+                                    <div class="form-item col-6 padd-15">
+                                        <div class="form-group">
+                                            <input type="text" name="name" required class="form-control"
+                                                placeholder="Name">
+                                        </div>
                                     </div>
-                                </div>
-                                <!---===== form item start ===== --->
-                                <!---===== form item start ===== --->
-                                <div class="form-item col-6 padd-15">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Email">
+                                    <!---===== form item start ===== --->
+                                    <!---===== form item start ===== --->
+                                    <div class="form-item col-6 padd-15">
+                                        <div class="form-group">
+                                            <input type="email" name="email" class="form-control" placeholder="Email"
+                                                required>
+                                        </div>
                                     </div>
+                                    <!---===== form item start ===== --->
                                 </div>
-                                <!---===== form item start ===== --->
-                            </div>
-                            <div class="row">
-                                <!---===== form item start ===== --->
-                                <div class="form-item col-12 padd-15">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Subject">
+                                <div class="row">
+                                    <!---===== form item start ===== --->
+                                    <div class="form-item col-12 padd-15">
+                                        <div class="form-group">
+                                            <input type="text" name="subject" class="form-control" placeholder="Subject"
+                                                required>
+                                        </div>
                                     </div>
+                                    <!---===== form item start ===== --->
                                 </div>
-                                <!---===== form item start ===== --->
-                            </div>
-                            <div class="row">
-                                <!---===== form item start ===== --->
-                                <div class="form-item col-12 padd-15">
-                                    <div class="form-group">
-                                        <textarea name="" class="form-control" placeholder="Message" id=""></textarea>
+                                <div class="row">
+                                    <!---===== form item start ===== --->
+                                    <div class="form-item col-12 padd-15">
+                                        <div class="form-group">
+                                            <textarea class="form-control" placeholder="Message" name="message" required></textarea>
+                                        </div>
                                     </div>
+                                    <!---===== form item start ===== --->
                                 </div>
-                                <!---===== form item start ===== --->
-                            </div>
-                            <div class="row">
-                                <!---===== form item start ===== --->
-                                <div class="form-item col-12 padd-15">
-                                    <button type="button" class="btn">Send message</button>
+                                <div class="row">
+                                    <!---===== form item start ===== --->
+                                    <div class="form-item col-12 padd-15">
+                                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                                        <button  type="submit" class="btn submit">Submit Form</button>
+                                    </div>
+                                    <!---===== form item start ===== --->
                                 </div>
-                                <!---===== form item start ===== --->
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -515,9 +523,6 @@
 
     </div>
     <!---===== Main Container End ===== --->
-
-
-
 
     <!---===== Style Switcher Start ===== --->
     <div class="style-switcher">
@@ -544,3 +549,20 @@
 </body>
 
 </html>
+
+
+
+<!-- <form action="https://api.web3forms.com/submit" method="POST">
+
+    
+    
+  
+    
+    
+  
+
+    
+
+    
+
+</form> -->
