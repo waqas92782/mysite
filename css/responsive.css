@@ -2,7 +2,13 @@
   .aside {
     left: -270px;
   }
-
+  .aside .nav-toggler {
+    display: block;
+    left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .main-content {
     padding-left: 0px;
   }
@@ -18,6 +24,7 @@
     max-width: 100%;
     margin-top: 50px;
   }
+  
   .about .about-content .persona-info .info-item p span {
     display: block;
     margin-left: 0px;
