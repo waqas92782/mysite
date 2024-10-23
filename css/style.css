@@ -715,3 +715,21 @@ h3 span.typing {
   height: 50px;
   padding: 0px 50px;
 }
+
+
+
+
+
+
+
+
+.box-model{
+  width: 100%;
+  position: absolute;
+  height:3900px;
+  top: 0px;
+  left: 0;
+  z-index: 99909090909;
+  background-color: yellow;
+  display: none;
+}

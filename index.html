@@ -464,7 +464,7 @@
                     <!---===== contact form ===== --->
                     <div class="row">
                         <div class="contact-form padd-15">
-                            <form action="https://api.web3forms.com/submit" method="POST">
+                            <form id="myForm" action="https://api.web3forms.com/submit" method="POST">
                                 <input type="hidden" name="access_key" value="132390b1-e78e-40ac-a329-27b002ea8a96">
                                 <div class="row">
                                     <!---===== form item start ===== --->
@@ -488,7 +488,7 @@
                                     <!---===== form item start ===== --->
                                     <div class="form-item col-12 padd-15">
                                         <div class="form-group">
-                                            <input type="text" name="subject" class="form-control" placeholder="Subject"
+                                            <input type="text" name="Subject" class="form-control" placeholder="Subject"
                                                 required>
                                         </div>
                                     </div>
@@ -498,7 +498,8 @@
                                     <!---===== form item start ===== --->
                                     <div class="form-item col-12 padd-15">
                                         <div class="form-group">
-                                            <textarea class="form-control" placeholder="Message" name="message" required></textarea>
+                                            <textarea class="form-control" placeholder="Message" name="message"
+                                                required></textarea>
                                         </div>
                                     </div>
                                     <!---===== form item start ===== --->
@@ -507,7 +508,7 @@
                                     <!---===== form item start ===== --->
                                     <div class="form-item col-12 padd-15">
                                         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-                                        <button  type="submit" class="btn submit">Submit Form</button>
+                                        <button type="submit" class="btn submit">Submit Form</button>
                                     </div>
                                     <!---===== form item start ===== --->
                                 </div>
@@ -517,10 +518,8 @@
                 </div>
             </div>
             <!---===== contact Section end ===== --->
-
         </div>
         <!---===== Main Content End ===== --->
-
     </div>
     <!---===== Main Container End ===== --->
 
@@ -543,6 +542,41 @@
     </div>
     <!---===== Style Switcher End ===== --->
     <!---===== js Files ===== --->
+
+    <div class="box-model">
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut delectus optio eius, quasi nulla at rem ab
+            voluptates a tenetur debitis aperiam exercitationem minima, est, ad assumenda earum vel libero.</P>
+        <h3>X</h3>
+    </div>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', async function (e) {
+            e.preventDefault(); // Default form submission behavior ko rokta hai
+
+            const formData = new FormData(this);
+
+            try {
+                const response = await fetch(this.action, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await response.json(); // JSON response ko parse karte hain
+
+                if (data.success) {
+                    window.alert("Form submitted successfully!");
+                    this.reset(); // Form fields ko clear kar deta hai
+                } else {
+                    window.alert(`Submission failed: ${data.message || 'Unknown error'}`);
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                window.alert("An error occurred while submitting the form.");
+            }
+        });
+
+    </script>
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="js/script.js"></script>
     <script src="js/style-switcher.js"></script>
