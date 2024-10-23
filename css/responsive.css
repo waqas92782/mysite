@@ -58,6 +58,9 @@
 }
 
 @media (max-width: 500px) {
+  .home .home-info {
+    margin-top: 50px;
+  }
   .Contact .Contact-info-item {
     flex: 0 0 100%;
     max-width: 100%;
