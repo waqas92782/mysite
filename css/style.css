@@ -297,6 +297,14 @@ h3 span.typing {
   height: 400px;
   margin: auto;
   border-radius: 7px;
+  transition: all 0.3s ease-in;
+}
+
+
+.home .home-img img:hover{
+  transition: all 0.3s ease-in;
+  transform: rotate(15deg);
+  border-radius: 20px;
 }
 
 /* about  */

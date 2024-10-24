@@ -30,6 +30,10 @@
     max-width: 100%;
     margin-top: 50px;
   }
+
+  .home .home-img::after {
+    bottom: -20px;
+  }
   
   .about .about-content .persona-info .info-item p span {
     display: block;
