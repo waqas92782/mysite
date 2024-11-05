@@ -7,6 +7,7 @@ var typed = new Typed(".typing", {
 
 const sidebarButton = document.querySelector(".nav-toggler");
 const aside = document.querySelector(".aside");
+const navLinks = document.querySelectorAll(".nav a"); // Select all links
 
 // Toggle sidebar on button click
 sidebarButton.addEventListener("click", (e) => {
@@ -21,3 +22,10 @@ document.body.addEventListener("click", () => {
 
 // Prevent sidebar from closing when clicking inside it
 aside.addEventListener("click", (e) => e.stopPropagation());
+
+// Hide sidebar when any navigation link is clicked
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    aside.style.left = "-270px";
+  });
+});

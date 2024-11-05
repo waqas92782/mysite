@@ -121,3 +121,10 @@
     right: 5px;
   }
 }
+
+
+@media (min-width: 769px) {
+  .aside {
+      left: 0px !important;
+  }
+}
